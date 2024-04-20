@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Abelha
+comment0.text=\r\n\ Classe\ abelha\ para\ ser\ utilizada\ no\ jogo\ BeeWorld\r\n\ \r\n\ @author\ (Deborah\ Bombini\ \r\n\ @version\ 2024-04-20\r\n
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\r\n\ M\u00E9todo\ que\ ser\u00E1\ executado\ quando\ apertado\ o\ bot\u00E3o\ act\ ou\ run.\r\n
+numComments=2

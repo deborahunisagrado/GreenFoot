@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Mosca
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Mosca\ here.\r\n\ \r\n\ @author\ Deborah\ Bombini\r\n\ @version\ 2024-04-20\r\n
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\r\n\ m\u00E9todo\ act\ \u00E9\ executado\ sempre\ que\ apertarmos\ o\ bot\u00E3o\ act\ ou\ ficar\u00E1\ em\ execu\u00E7\u00E3o\ quando\ \r\n\ apertarmos\ o\ bot\u00E3o\ run.\r\n
+numComments=2

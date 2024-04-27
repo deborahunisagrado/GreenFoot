@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Inseto
+comment0.text=\r\n\ Classe\ que\ representa\ o\ Inseto\ que\ sera\ utilizado\ no\ jogo\r\n\ \r\n\ @author\ Deborah\ Bombini\r\n\ @version\ 2024-04-27\r\n
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Inseto\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment2.params=
+comment2.target=void\ verificarCanto()
+comment2.text=\r\n\ Metodo\ que\ ira\ verificar\ se\ o\ objeto\ est\u00E1\ no\ canto\ do\ mundo\r\n
+numComments=3

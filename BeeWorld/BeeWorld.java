@@ -28,7 +28,6 @@ public class BeeWorld extends World
     {
         Abelha abelha = new Abelha();
         addObject(abelha,52,29);
-        abelha.setLocation(77,76);
         Mosca mosca = new Mosca();
         addObject(mosca,71,256);
         Mosca mosca2 = new Mosca();
@@ -37,5 +36,11 @@ public class BeeWorld extends World
         addObject(aranha,384,342);
         mosca.setLocation(210,547);
         abelha.setLocation(156,247);
+        Mosca mosca3 = new Mosca();
+        addObject(mosca3,646,538);
+        Mosca mosca4 = new Mosca();
+        addObject(mosca4,656,185);
+        Mosca mosca5 = new Mosca();
+        addObject(mosca5,132,114);
     }
 }

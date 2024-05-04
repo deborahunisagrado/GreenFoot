@@ -8,13 +8,21 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Mosca extends Inseto
 {
+    private int velocidade;
     /**
      * método act é executado sempre que apertarmos o botão act ou ficará em execução quando 
      * apertarmos o botão run.
      */
+    public Mosca(){
+        velocidade = 1;
+        this.turn(Greenfoot.getRandomNumber(180));
+    }
+    public Mosca(int vel, int ang){
+        velocidade = vel;
+        setRotation(ang);
+    }
     public void act()
     {
-        // Add your action code here.
         move(1);
         verificarCanto();
     }

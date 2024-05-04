@@ -21,8 +21,7 @@ public class Inseto extends Actor
      */
     public void verificarCanto(){
         if(isAtEdge()){
-            turn(180);            
+            turn(Greenfoot.getRandomNumber(180));           
         }
-        
     }
 }

@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class BeeWorld extends World
 {
-
+    private Abelha abelha = null;
     /**
      * Constructor for objects of class BeeWorld.
      * 
@@ -26,21 +26,20 @@ public class BeeWorld extends World
      */
     private void prepare()
     {
-        Abelha abelha = new Abelha();
+        abelha = new Abelha();
         addObject(abelha,52,29);
-        Mosca mosca = new Mosca();
-        addObject(mosca,71,256);
-        Mosca mosca2 = new Mosca();
-        addObject(mosca2,396,92);
         Aranha aranha = new Aranha();
         addObject(aranha,384,342);
-        mosca.setLocation(210,547);
-        abelha.setLocation(156,247);
-        Mosca mosca3 = new Mosca();
-        addObject(mosca3,646,538);
-        Mosca mosca4 = new Mosca();
-        addObject(mosca4,656,185);
-        Mosca mosca5 = new Mosca();
-        addObject(mosca5,132,114);
+        for(int i=0;i<15;i++){
+            int pX = Greenfoot.getRandomNumber(getWidth());
+            int pY = Greenfoot.getRandomNumber(getHeight());
+            int vel = Greenfoot.getRandomNumber(5)+1;
+            int ang = Greenfoot.getRandomNumber(360);
+            addObject(new Mosca(vel, ang), pX, pY);
+        }
+    }
+
+    public Abelha getAbelha(){
+        return abelha;
     }
 }

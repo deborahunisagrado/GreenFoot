@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class SpaceWorld extends World
 {
-
+    public Bala bala = null;
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -16,7 +16,7 @@ public class SpaceWorld extends World
     public SpaceWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1); 
+        super(800, 600, 1); 
         prepare();
     }
     
@@ -27,8 +27,22 @@ public class SpaceWorld extends World
     private void prepare()
     {
         Nave nave = new Nave();
-        addObject(nave,300,351);
+        addObject(nave,400,550);
         Alien alien = new Alien();
-        addObject(alien,307,32);
+        addObject(alien,400,50);
+    }
+
+    public Bala getBata(){
+        return bala;
+    }
+    public void criarBala(int pX, int pY){
+        if(bala == null){
+            bala = new Bala();
+            addObject(bala, pX, pY);
+        }
+    }
+    public void removerBala(){
+        removeObject(bala);
+        bala = null;
     }
 }

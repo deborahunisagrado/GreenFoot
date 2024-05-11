@@ -8,9 +8,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Abelha extends Actor
 {   
+    private static final int PONTOS = 1;
     public int vidas;
     public int pontos;
     private GreenfootImage[] imagens;
+    public int imgIdx = 0;
     
     public Abelha() {
         vidas = 3;
@@ -38,13 +40,14 @@ public class Abelha extends Actor
         capturaMosca();
         capturadaPelaAranha();
         mostarVidas();
-        mostarPontos();
+        //mostarPontos();
+        trocarImagens();
     }
     /**
      * Metodo que verifica se está na direita do mundo
      */
     public boolean isNaDireita(){
-        return (getX() > getWorld().getWidth() -10);            
+            return (getX() > getWorld().getWidth() -10);            
     }
     /**
      * Metodo que verifica se está na esquerda do mundo
@@ -91,7 +94,8 @@ public class Abelha extends Actor
             int pX = Greenfoot.getRandomNumber(getWorld().getWidth());
             int pY = Greenfoot.getRandomNumber(getWorld().getHeight());
             getWorld().addObject(new Mosca(Greenfoot.getRandomNumber(5) + 1, Greenfoot.getRandomNumber(360)), pX, pY);
-            pontos++;
+       
+            ((BeeWorld) getWorld()).addScore(PONTOS);
         }
     }
     
@@ -114,8 +118,11 @@ public class Abelha extends Actor
     public void mostarVidas(){
         getWorld().showText("Vidas: " + vidas, 40, 10);
     }
-        public void mostarPontos(){
+    public void mostarPontos(){
         getWorld().showText("Pontos: " + pontos, 700, 10);
     }
-
+    public void trocarImagens(){
+        setImage(imagens[imgIdx]);
+        imgIdx = (imgIdx + 1) % 4;
+    }
 }

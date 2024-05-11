@@ -9,6 +9,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class BeeWorld extends World
 {
     private Abelha abelha = null;
+    private int score;
+    private Placar placar = null;
     /**
      * Constructor for objects of class BeeWorld.
      * 
@@ -28,8 +30,10 @@ public class BeeWorld extends World
     {
         abelha = new Abelha();
         addObject(abelha,52,29);
+
         Aranha aranha = new Aranha();
         addObject(aranha,384,342);
+
         for(int i=0;i<15;i++){
             int pX = Greenfoot.getRandomNumber(getWidth());
             int pY = Greenfoot.getRandomNumber(getHeight());
@@ -37,9 +41,16 @@ public class BeeWorld extends World
             int ang = Greenfoot.getRandomNumber(360);
             addObject(new Mosca(vel, ang), pX, pY);
         }
+
+        placar = new Placar();
+        addObject(placar,770, 20);
     }
 
     public Abelha getAbelha(){
         return abelha;
+    }
+    public void addScore(int value){
+        score += value;
+        placar.setTexto("Score: " + score);
     }
 }

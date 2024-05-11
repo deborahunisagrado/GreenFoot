@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Placar
+comment0.text=\r\n\ Essa\ classe\ vai\ representar\ um\ placar\ no\ jogo\ BeeWorld\r\n\ \r\n\ @author\ Deborah\ Bombini\r\n\ @version\ 2024-05-11\r\n
+comment1.params=
+comment1.target=Placar()
+comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Placar\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment2.params=
+comment2.target=java.lang.String\ getTexto()
+comment3.params=value
+comment3.target=void\ setTexto(java.lang.String)
+comment4.params=
+comment4.target=void\ act()
+comment5.params=
+comment5.target=void\ atualizarImagem()
+numComments=6

@@ -14,12 +14,14 @@ public class Bala extends Actor
      */
     public void act()
     {
-        setLocation(getX(), getY()-5);
-        removerAlien();
-        if(isAtEdge()){
-            getWorld().removeObject(this);
-        }
+        setLocation(getX(), getY()-10);
         
+        removerAlien();
+        
+        if(isAtEdge()){
+            //getWorld().removeObject(this);
+            ((SpaceWorld)getWorld()).removerBala();
+        }
     }
         public void removerAlien(){
         if(isTouching(Alien.class)){

@@ -15,13 +15,14 @@ public class Nave extends Actor
     public void act()
     {
         if (Greenfoot.isKeyDown("left")){
-            move(-3);       
+            move(-10);       
         }
         if (Greenfoot.isKeyDown("right")){
-            move(3);       
+            move(10);       
         }
         if(Greenfoot.isKeyDown("space")){
-            getWorld().addObject(new Bala(), getX(), getY()-43);          
+            //getWorld().addObject(new Bala(), getX(), getY()-45);          
+            ((SpaceWorld)getWorld()).criarBala(getX(), getY()-45);
         }
         
     }
